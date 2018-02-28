@@ -15,7 +15,7 @@ namespace ConsoleApp_DeleteDoublon
                 // Variables locales
                 List<int> oListeEntier, oListeEntierSansDoublons;
 
-                // Instantisation
+                // Initialisation
                 oListeEntier = new List<int> { 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8, 1, 9 };
 
                 // Traitement de données
@@ -60,7 +60,7 @@ namespace ConsoleApp_DeleteDoublon
             // Variables Locales
             List<int> oListe;
 
-            // Instanciation
+            // Initialisation
             oListe = new List<int>();
             
             // Traitement de données

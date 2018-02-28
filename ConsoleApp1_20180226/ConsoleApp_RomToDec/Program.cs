@@ -13,15 +13,20 @@ namespace ConsoleApp_RomToDec
             try
             {
                 // Variables locales
-               
+                string NombreRomain;
+                int iValeur;
 
-                // Instantisation
-                
+                // Initialisation
+                Console.WriteLine("Saisir un nombre romain : ");
+                NombreRomain = Console.ReadLine();
 
                 // Traitement de données
-                
+                iValeur = GetValeurRomToDec(NombreRomain);
 
                 // Affichage
+                Console.WriteLine(iValeur);
+
+
             }
             catch (Exception aEx)
             {
@@ -41,15 +46,42 @@ namespace ConsoleApp_RomToDec
         public static int GetValeurRomToDec(string p_NombreRomain)
         {
             // Variables Locales
-            int iValeur;
+            int iValeur, iValeurCourant, iValeurSuivant;
 
-            // Instanciation
+            // Initialisation
             iValeur = 0;
+            iValeurCourant = 0;
+            iValeurSuivant = 0;
 
-            for(int i = 0; i < p_NombreRomain.Length; i++)
+            for (int i = 0; i < p_NombreRomain.Length; i++)
             {
-                iValeur += Program.Convertir(p_NombreRomain[i]);
+                iValeurCourant = Program.Convertir(p_NombreRomain[i]);
+
+                // Avant dernière lettre ?
+                if (i < p_NombreRomain.Length - 1)
+                {
+                    // Oui
+                    iValeurSuivant = Program.Convertir(p_NombreRomain[i + 1]);
+
+                    /**
+                     * if(iValeurCourant < iValeurSuivant)
+                     * {
+                     *      iValeur -= iValeurCourant;
+                     * } 
+                     * else
+                     * {
+                     *      iValeur += iValeurCourant;
+                     * }
+                     */
+
+                    iValeur += iValeurCourant < iValeurSuivant ?
+                        iValeur - iValeurCourant :
+                        iValeur + iValeurCourant;
+                }
             }
+
+            // Prendre en compte la dernière valeur
+            iValeur += iValeurCourant;
             return iValeur;
         }
 
@@ -63,12 +95,12 @@ namespace ConsoleApp_RomToDec
             // Variables Locales
             int iValeur;
 
-            // Instanciation
+            // Initialisation
             iValeur = 0;
 
             switch (p_NombreRomain)
             {
-                case 'M' : { iValeur = 1000; break; }
+                case 'M': { iValeur = 1000; break; }
                 case 'D': { iValeur = 500; break; }
                 case 'C': { iValeur = 100; break; }
                 case 'L': { iValeur = 50; break; }
