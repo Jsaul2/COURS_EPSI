@@ -34,9 +34,9 @@ namespace ConsoleApp_RomToDec
         }
 
         /**
-         *  Méthode retournant le nombre d'élement d'une liste
+         *  Méthode retournant la valeur d'un nombre Romain en décimal
          *  
-         *  @param p_oListe
+         *  @param p_NombreRomain
          */
         public static int GetValeurRomToDec(string p_NombreRomain)
         {
@@ -54,9 +54,9 @@ namespace ConsoleApp_RomToDec
         }
 
         /**
-         *  Méthode retournant le
+         *  Méthode de convertion d'un nombre romaine en décimal
          *  
-         *  @param p_oListe
+         *  @param p_NombreRomain
          */
         public static int Convertir(char p_NombreRomain)
         {
