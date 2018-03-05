@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TroisMethode", "TroisMethod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormationBook", "FormationBook\FormationBook.csproj", "{1692DFD8-1AD8-478A-9F1A-07427EFA531A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrice", "ValeurReference\Matrice.csproj", "{2FBF5F6D-2A22-4609-9239-6B7D25C13AF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1692DFD8-1AD8-478A-9F1A-07427EFA531A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1692DFD8-1AD8-478A-9F1A-07427EFA531A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1692DFD8-1AD8-478A-9F1A-07427EFA531A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FBF5F6D-2A22-4609-9239-6B7D25C13AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FBF5F6D-2A22-4609-9239-6B7D25C13AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FBF5F6D-2A22-4609-9239-6B7D25C13AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FBF5F6D-2A22-4609-9239-6B7D25C13AF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
