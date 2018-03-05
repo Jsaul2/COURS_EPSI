@@ -198,12 +198,44 @@ namespace FormationBook
 
             // Initialisation
             oListe = new List<string>();
+            i = 0;
 
             // Traitement de données
-            foreach (string s in p_oListe)
+            // Version pour une une nouvelle liste
+            for(i = 2; i < p_oListe.Count; i++)
             {
-                //TODO
+                oListe.Add(p_oListe[i]);
             }
+            
+
+            // V1
+            //if (oListe.Count > 0)
+            //{
+            //    oListe.RemoveAt(0);
+            //}
+            //if (oListe.Count > 0)
+            //{
+            //    oListe.RemoveAt(0);
+            //}
+
+            // V2
+            //if (oListe.Count >= 2)
+            //{
+            //    oListe.RemoveAt(0);
+            //    oListe.RemoveAt(0);
+            //}
+            //else if(oListe.Count == 1)
+            //{
+            //    oListe.RemoveAt(0);
+            //}
+
+            // V3
+            //while (i < 2 && oListe.Count > 0)
+            //{
+            //    oListe.RemoveAt(0);
+            //    i++;
+            //}
+
 
             // Retour
             return oListe;
